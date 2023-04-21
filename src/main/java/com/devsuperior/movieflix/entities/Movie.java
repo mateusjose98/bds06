@@ -6,6 +6,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
+@Table(name = "tb_movie")
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,6 +15,7 @@ public class Movie {
     private String subTitle;
     private Integer year;
     private String imgUrl;
+    @Column(columnDefinition = "TEXT")
     private String  synopsis;
     @ManyToOne
     @JoinColumn
